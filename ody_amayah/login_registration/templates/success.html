@@ -1,0 +1,10 @@
+Thank you for registering, you could have registered anywhere else but you chose to be here with us!!!
+
+{% if session.is_logged_in %}
+    <p>you are logged in as user # {{ session.user_id}}</p>
+    <form action="users/logout" method="post">
+    
+        <input type="submit" value="Logout">
+
+    </form>
+{% endif %}
