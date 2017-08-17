@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Session Words</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'survey_form/css/main.css'%}">
+  </head>
+
+  <body>
+    <div class="container">
+      <form action="/add_words" method="post">
+        <div class="rocks">
+
+          <div>
+            <label><h1>Add a new word</h1></label>
+            <input type="text" name="content">
+          </div>
+
+          <div>
+            <label for='color'><p>Choose color</p></label>
+            <label><input type="radio" name="color" value="Red">Red</label>
+            <label><input type="radio" name="color" value="Green">Green</label>
+            <label><input type="radio" name="color" value="Blue">Blue</label>
+          </div>
+
+          <p>
+            <label><input type="checkbox" name="big font" value="show in BIG fonts!"> show in BIG fonts!</label>
+          </p>
+
+          <div>
+            <button type="submit" >Add to Session</button>
+          </div>
+      </form>
+      </div>
+
+                  <div class="rocks">
+                          <form class="" action="/clear" method="post">
+                                <p>
+                               <a href="/"><button type="submit">Clear Session</button></a>
+                             </p>
+
+                          </form>
+                  </div>
+    </div>
+  </body>
+
+</html>

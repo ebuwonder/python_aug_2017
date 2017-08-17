@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Survey Form</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'survey_form/css/main.css' %}" media="screen" title="no title"  charset="utf-8">
+  </head>
+  <body>
+       <div class="container">
+                  <div>
+                    <p>Thanks for submitting this form! You have submitted this form {{request.session.tries}} times now.</p>
+                  </div>
+
+                  <div>
+                    <h2>Submitted Information</h2>
+                    <div>
+
+                      <label>Your Name:</label>
+                      <span>{{ request.session.name }}</span>
+                    </div>
+
+                    <div>
+                      <label>Dojo Location:</label>
+                      <span>{{ request.session.location }}</span>
+                    </div>
+
+                    <div>
+                      <label>Favorite Language:</label>
+                      <span>{{ request.session.language }}</span>
+                    </div>
+
+                    <div>
+                      <label>Comment:</label>
+                      <span>{{ request.session.comment }}</span>
+                    </div>
+
+                        <div>
+                         <input type="submit" value="Go back">
+                    </div>
+                  </form>
+
+
+                  </div>
+
+
+       </div>
+
+  </body>
+</html>
